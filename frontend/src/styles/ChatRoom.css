@@ -1,0 +1,58 @@
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  overflow-y: auto;
+  background: linear-gradient(180deg, #000814, #001d3d 70%, #003566);
+  scrollbar-width: thin;
+  scrollbar-color: #00b4d8 #001d3d;
+}
+
+/* Scrollbar for Chrome/Edge */
+.chat-window::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-window::-webkit-scrollbar-track {
+  background: #001d3d;
+}
+.chat-window::-webkit-scrollbar-thumb {
+  background-color: #00b4d8;
+  border-radius: 3px;
+}
+
+/* Message bubbles */
+.message {
+  margin: 6px 0;
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Your own messages */
+.own-message {
+  align-self: flex-end;
+  background: #00b4d8;
+  color: #000814;
+  border-top-right-radius: 0;
+  box-shadow: 0 0 5px rgba(0, 180, 216, 0.3);
+}
+
+/* Other users' messages */
+.other-message {
+  align-self: flex-start;
+  background: #001d3d;
+  color: #caf0f8;
+  border-top-left-radius: 0;
+  box-shadow: 0 0 5px rgba(0, 84, 147, 0.3);
+}
+
+.user {
+  display: block;
+  font-size: 0.8em;
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
