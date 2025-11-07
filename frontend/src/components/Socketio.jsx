@@ -12,7 +12,7 @@ const ChatApp = () => {
 
 useEffect(() => {
   socketRef.current = io("http://localhost:5000", {
-    transports: ["websocket"], // ✅ ensures stable connection
+    transports: ["websocket"], 
   });
 
   socketRef.current.on("chatRoom", (msg) => {
